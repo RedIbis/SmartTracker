@@ -1,19 +1,79 @@
-# SmartTracker
-Crypto Smart Tracker, track smart money.
+Smart Money Crypto Dashboard
+=============================
 
-Custom License Agreement
+This dashboard helps users track smart money movements in the cryptocurrency space. It provides visual insights into whale activity, token inflows/outflows, and alerts for specific tokens like XRP and SUI.
 
-Copyright (c) 2024 Kevin Brownfield
+---
 
-Permission is hereby granted to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, and distribute the Software for non-commercial purposes, subject to the following conditions:
+📦 Features
 
-1. Attribution:
-   You must give appropriate credit to the original author, Kevin Brownfield, provide a link to the source, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- Top wallet movements
+- Whale buy/sell activity
+- Token inflows/outflows
+- XRP & SUI smart money alerts
+- Summary of smart money trends
 
-2. Non-Commercial Use:
-   You may not use the Software for commercial purposes without explicit written permission from the copyright holder. To request commercial use rights, please contact Kevin Brownfield via the contact form on his website: https://kevinbrownfield.com
+---
 
-3. No Warranty:
-   The Software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
+📦 Requirements
 
-By using or modifying this Software, you agree to the terms of this license.
+- Python 3.7+
+- dash
+- dash-bootstrap-components
+- gunicorn (for deployment)
+
+Install dependencies using:
+
+    pip install -r requirements.txt
+
+---
+
+⚙️ Installation
+
+1. Clone the repository:
+
+    git clone https://github.com/yourusername/smart-money-dashboard.git
+    cd smart-money-dashboard
+
+2. Install dependencies:
+
+    pip install -r requirements.txt
+
+3. Run the app locally:
+
+    python app.py
+
+---
+
+🚀 Deployment on Render
+
+1. Create a GitHub repository and push your code.
+2. Create a `requirements.txt` and `Procfile`:
+
+    requirements.txt:
+        dash
+        dash-bootstrap-components
+        gunicorn
+
+    Procfile:
+        web: gunicorn app:server
+
+3. Go to https://render.com and create a new Web Service.
+4. Connect your GitHub repo and set the start command to:
+
+        gunicorn app:server
+
+5. Deploy and get your public URL.
+
+6. Embed in WordPress using:
+
+    <iframe src="https://your-dash-app.onrender.com" width="100%" height="800px" frameborder="0"></iframe>
+
+---
+
+👤 Attribution
+
+Created by Kevin Brownfield.  
+For inquiries or commercial licensing, please use the contact form at:  
+https://kevinbrownfield.com
+
